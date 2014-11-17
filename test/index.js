@@ -17,7 +17,9 @@ describe('Initial test',function() {
 			});
 			expect(files).to.be.an('array');
 			expect(files.length).equal(2);
-		}).call(this);
+		}.bind(this)).catch(function(error) {
+			console.error(error.stack);
+		});
 	});
 
 	it('should find 2 txt files without cwd',function(){
@@ -25,7 +27,9 @@ describe('Initial test',function() {
 			var files = yield expand(path.join(__dirname, this.txtPath));
 			expect(files).to.be.an('array');
 			expect(files.length).equal(2);
-		}).call(this);
+		}.bind(this)).catch(function(error) {
+			console.error(error.stack);
+		});
 	});
 
 	it('should find 2 txt files as object prop (with files prop) with cwd',function(){
@@ -41,7 +45,9 @@ describe('Initial test',function() {
 			});
 			expect(files['some-dest/some.txt'].files).to.be.an('array');
 			expect(files['some-dest/some.txt'].files.length).equal(2);
-		}).call(this);
+		}.bind(this)).catch(function(error) {
+			console.error(error.stack);
+		});
 	});
 
 	it('should find 2 txt files as object prop (without files prop) with cwd',function(){
@@ -55,6 +61,8 @@ describe('Initial test',function() {
 			});
 			expect(files['some-dest/some.txt']).to.be.an('array');
 			expect(files['some-dest/some.txt'].length).equal(2);
-		}).call(this);
+		}.bind(this)).catch(function(error) {
+			console.error(error.stack);
+		});
 	});
 });
