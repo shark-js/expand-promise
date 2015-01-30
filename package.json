@@ -1,23 +1,23 @@
 {
-  "name": "expand",
-  "version": "1.0.0",
-  "description": "expand ======",
+  "name": "expand-promise",
+  "version": "0.0.1",
+  "description": "expand as promise",
   "main": "lib/expand.js",
   "scripts": {
     "test": "node_modules/.bin/mocha --harmony ./test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shark-js/expand.git"
+    "url": "https://github.com/shark-js/expand-promise.git"
   },
   "author": "Vadim Goncharov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shark-js/expand/issues"
+    "url": "https://github.com/shark-js/expand-promise/issues"
   },
-  "homepage": "https://github.com/shark-js/expand",
+  "homepage": "https://github.com/shark-js/expand-promise",
   "engines": {
-    "node": ">=0.11.14 <0.12",
+    "node": ">=0.11.14",
     "npm": ">=2.1.5"
   },
   "engineStrict": true,
@@ -28,5 +28,11 @@
   "devDependencies": {
     "chai": "^1.9.2",
     "mocha": "^2.0.1"
-  }
+  },
+  "files": [
+    "lib",
+    "test",
+    "LICENCE",
+    "README.md"
+  ]
 }
